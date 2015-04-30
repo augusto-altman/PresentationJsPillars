@@ -1,0 +1,7 @@
+{
+  "name": "presentation-the-pillars-of-javascript",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
