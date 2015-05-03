@@ -31,11 +31,16 @@ html
       section(data-bespoke-backdrop='socialmedia')
         h4
           ul
-            li <a href="https://twitter.com/AugustoAltman">Twitter</a>
-            li <a href="https://github.com/augusto-altman">GitHub</a>
-            li <a href="https://www.npmjs.com/~augusto.altman">NPM</a>
-            li <a href="http://stackoverflow.com/users/3685148/augustoaltman">Stackoverflow</a>
-            li <a href="http://augustoaltman.tumblr.com/">blog</a>
+            li
+              span(style='color:orange') <a href="https://twitter.com/AugustoAltman">Twitter</a>
+            li
+              span(style='color:orange') <a href="https://github.com/augusto-altman">GitHub</a>
+            li
+              span(style='color:orange') <a href="https://www.npmjs.com/~augusto.altman">NPM</a>
+            li
+              span(style='color:orange') <a href="http://stackoverflow.com/users/3685148/augustoaltman">Stackoverflow</a>
+            li
+              span(style='color:orange') <a href="http://augustoaltman.tumblr.com/">blog</a>
 
       section(class='gif gif--nerd')
 
@@ -122,7 +127,7 @@ html
         h3 Chapter 2
 
       section(data-bespoke-backdrop='everywhere')
-        h2 Closures, closures everywhere
+        h2 Closures, closures everywhere.
         h3 First pillar.
 
       section(data-bespoke-backdrop='madbaby')
@@ -329,5 +334,16 @@ html
 
       section
         h3 Chapter 3
+
+      section(data-bespoke-backdrop='prototype')
+        h2 Prototypal inheritance.
+        h3 Second pillar.
+
+      section(data-bespoke-backdrop='madbaby')
+        h2 Everybody should clearly understand prototypal inheritance!!
+        h3 They enable code re-utilization and therefore are part of the language foundations.
+
+      section(data-bespoke-backdrop='evolution')
+        h3 In prototypal inheritance, instances inherit from other instances.
 
     script(src='build/build.js')
