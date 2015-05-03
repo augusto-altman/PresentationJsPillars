@@ -28,6 +28,15 @@ html
                 }
               };
 
+      section(data-bespoke-backdrop='me')
+        h4
+          ul
+            li <a href="https://twitter.com/AugustoAltman">Twitter</a>
+            li <a href="https://github.com/augusto-altman">GitHub</a>
+            li <a href="https://www.npmjs.com/~augusto.altman">NPM</a>
+            li <a href="http://stackoverflow.com/users/3685148/augustoaltman">Stackoverflow</a>
+            li <a href="http://augustoaltman.tumblr.com/">blog</a>
+
       section(class='gif gif--nerd')
 
       section(data-bespoke-backdrop='pillars')
@@ -93,7 +102,7 @@ html
 
       section(data-bespoke-backdrop='theproblem')
         h2 The problem isn't JavaScript.
-        h3 The problem the way people learn it.
+        h3 The problem is the way people learn it.
 
       section(data-bespoke-backdrop='noideadog')
         h2 The reallity
@@ -113,7 +122,104 @@ html
         h3 Chapter 2
 
       section(data-bespoke-backdrop='everywhere')
-        h2 Clousures, clousures everywhere
+        h2 Closures, closures everywhere
         h3 First pillar.
+
+      section(data-bespoke-backdrop='madbaby')
+        h2 Everybody should clearly understand closures!!
+        h3 They enable state encapsulation and therefore are part of the language foundations.
+
+      section(data-bespoke-backdrop='twofingers')
+        h2 There are two key concepts around closures:
+        h4
+          ul
+            li First-class functions.
+            li Function lexical scope.
+
+      section(data-bespoke-backdrop='firstclassplane')
+        h2 First-class functions.
+
+      section(data-bespoke-backdrop='firstclass')
+        h2 A first-class function is one that may participate as a normal data
+        h3 i.e. be created literally at runtime, be passed as an argument, or be returned as a value from another function.
+
+      section
+        pre(class='code--small')
+          code.language-javascript.
+            function someFun() {
+              console.log('lalala');
+            }
+
+            function someOtherFunc(callback) {
+              callback();
+            }
+
+            someOtherfunc(someFunc);
+
+      section(data-bespoke-backdrop='lexical')
+        h2 Lexical scopes.
+
+      section(class='gif gif--fight')
+        h4 For the sake conceptual clearity.
+        h2 Context vs Scope
+
+      section(data-bespoke-backdrop='scientiscat')
+        h3 Every function invocation has both a scope and a context associated with it.
+        h4
+          ul
+            li Scope pertains to the variable access of the function when it is invoked.
+            li Context is always the value of the this keyword.
+
+      section(data-bespoke-backdrop='yingyang')
+        h3 In general programming language theory, scopes can be nested at any block level.
+        h2 Types of nested scopes.
+        h4
+          ul
+            li Lexical scopes, e.g: C, C++, JavaScript
+            li Dynamic scopes, e.g: Ruby
+
+      section(data-bespoke-backdrop='chucknorrisapproves')
+        h2 JavaScript allows scope nesting at function level. 
+        h3 Functions are lexical scoped in JavaScript.
+
+      section(data-bespoke-backdrop='lexicalscopes')
+
+      section(class='gif gif--boring')
+        h4 Lexical scope is the concept, and JavaScript implements it via the scope chain.
+        h3 A function has access to the variables present in their outer enclosing functions.
+
+      section(data-bespoke-backdrop='scopechain')
+
+      section(data-bespoke-backdrop='closure')
+        h2 Closures
+
+      section(data-bespoke-backdrop='thinking')
+        h3 Therefore, whenever a function is treated as data it must mantain its scope chain.
+        h4 i.e. when we pass a function reference as an argument we are also passing its scope chain so it can be executed later maintaining its lexical scope.
+
+      section(data-bespoke-backdrop='awesome')
+        h2 And that's what a closure is!
+        h3 Formally speaking: A closure is a pair consisting of the function code and the environment in which the function is created (its lexical scopes).
+
+      section
+        pre(class='code--small')
+          code.language-javascript.
+            function funcFactory() {
+              var name = "tito";
+              function showName() {
+                console.log(name);
+              }
+              return showName;
+            }
+
+            var aFunc = funcFactory();
+            aFunc();
+
+      section(data-bespoke-backdrop='enlightened')
+        h3 Like objects, closures are a mechanism for containing state. But only encapsulated state..
+        h4 So it's a means for encapsulation.
+
+      section(class='gif gif--why')
+        h2 Aaand... Why?
 
     script(src='build/build.js')
