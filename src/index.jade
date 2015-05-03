@@ -16,7 +16,7 @@ html
 
       section(data-bespoke-backdrop='me')
         h2 About me
-        pre(class='code--small')
+        pre(class='code--medium')
           code.language-javascript.
             var author = {
               tito: {
@@ -144,7 +144,7 @@ html
         h3 i.e. be created literally at runtime, be passed as an argument, or be returned as a value from another function.
 
       section
-        pre(class='code--small')
+        pre(class='code--medium')
           code.language-javascript.
             function someFun() {
               console.log('lalala');
@@ -194,7 +194,7 @@ html
         h2 Closures
 
       section(data-bespoke-backdrop='thinking')
-        h3 Therefore, whenever a function is treated as data it must mantain its scope chain.
+        h3 Whenever a function is treated as data it must mantain its scope chain.
         h4 i.e. when we pass a function reference as an argument we are also passing its scope chain so it can be executed later maintaining its lexical scope.
 
       section(data-bespoke-backdrop='awesome')
@@ -202,7 +202,7 @@ html
         h3 Formally speaking: A closure is a pair consisting of the function code and the environment in which the function is created (its lexical scopes).
 
       section
-        pre(class='code--small')
+        pre(class='code--medium')
           code.language-javascript.
             function funcFactory() {
               var name = "tito";
@@ -219,7 +219,115 @@ html
         h3 Like objects, closures are a mechanism for containing state. But only encapsulated state..
         h4 So it's a means for encapsulation.
 
-      section(class='gif gif--why')
-        h2 Aaand... Why?
+      section(data-bespoke-backdrop='factory')
+        h2 A great example of how closures provides encapsulation is the 
+          span(style='color:orange') factory constructor function pattern.
+        h3 <a href="http://javascript.info/tutorial/factory-constructor-pattern">From javascript.info patterns repository.</a>
+
+      section
+        pre(class='code--small')
+          code.language-javascript.
+            function Person(newPersonName, newPersonDeathAge) { //factory constructor function
+              var name = newPersonName || 'tito';
+              var deathAge = newPersonDeathAge || 80;
+              var age = 0;
+              return {
+                reName: function (newName){
+                  name = newName;
+                },
+                getName: function (){
+                  return name;
+                },
+                happyBithday: function () {
+                  if(this.isAlive())
+                    age++;
+                },
+                getAge: function () {
+                  return age;
+                },
+                isAlive: function () {
+                  return this.getAge() < deathAge;
+                }
+              };
+            }
+
+      section
+        pre(class='code--medium')
+          code.language-javascript.
+            var josePerez = Person('jose', 30);
+            var juanRodriguez = Person('juan');
+
+            for(var i = 0; i<20; i++){
+              josePerez.happyBithday();
+            }
+            juanRodriguez.happyBithday();
+            juanRodriguez.happyBithday();
+
+            console.log(josePerez.getAge()); //20
+            console.log(juanRodriguez.getAge()); //2
+
+      section(data-bespoke-backdrop='coolcat')
+        h3 Encapsulation through closures can also be exploited to:
+        h4
+          ul
+            li Propagate state through async calls.
+            li Create namespaces.
+
+      section(data-bespoke-backdrop='statepropagation')
+        h2 Async state propagation.
+        h3 Callbacks.
+
+      section
+        pre(class='code--small')
+          code.language-javascript.
+            function TimeTalker(newMaxTime, newPhrase) {
+              var maxTime = newMaxTime || 30;
+              var phrase = newPhrase || 'soyet le tito';
+              var interval;
+              var counter = 0;
+              return {
+                start: function () {
+                  interval = setInterval(function callback(){
+                    console.log(phrase);
+                    counter++;
+                    if(counter >= maxTime) {
+                      clearInterval(interval);
+                    }
+                  }, 1000);
+                }
+              };
+            }
+
+            var aTalker = TimeTalker(5, 'closures are awesome');
+            aTalker.start();
+
+      section(data-bespoke-backdrop='carcrash')
+        h2 Namespace creation.
+        h3 Avoiding name crashes.
+
+      section(data-bespoke-backdrop='crockford')
+        h2 A great example of how closures provides namespacing is the 
+          span(style='color:orange') module pattern.
+        h3 Popularized by Douglas Crockford
+
+      section
+        pre(class='code--small')
+          code.language-javascript.
+            var someVar = 'San Lorenzo de Almagro';
+            console.log(someVar); //San Lorenzo de Almagro
+
+            var Module = (function () { //IIFE
+              var someVar = 'walla walla';
+              var someOtherVar;
+              console.log(someVar); //walla walla
+              return function() {
+                //doSomething
+              };
+            })();
+
+            console.log(someVar); //San Lorenzo de Almagro
+
+      section
+        h3 Chapter 3
 
     script(src='build/build.js')
