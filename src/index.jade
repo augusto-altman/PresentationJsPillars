@@ -351,4 +351,70 @@ html
         h6 It is fairly trivial to build a classic model on top of a prototypal model, while the other way around is a far more difficult task.
         h3 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Mozilla</a>
 
+      section(data-bespoke-backdrop='three')
+        h3 There are three kinds of Prototypal inheritance.
+        h4 
+          ul
+            li Delegation.
+            li Concatenation.
+            li Closure. (Identified by Eric Elliot).
+        h4 And the three of them are supported by JavaScript.
+
+      section(data-bespoke-backdrop='delegation')
+        h2 Delegation
+
+      section(data-bespoke-backdrop='nerd')
+        h2 A delegate prototype is an object that serves as a base for another object.
+        h4 The language is resposible of dispatching the correct method or finding the right piece of data simply by following a series of delegation pointers (from object to its prototype) until a match is found.
+
+      section(data-bespoke-backdrop='dafuck')
+        h3 JavaScript provides natively delegation inheritance through the prototype chain mechanism.
+      
+      section(data-bespoke-backdrop='prototype-chain')
+
+      section(data-bespoke-backdrop='relaxedhomer')
+        h4 There are two well-known ways of stablishing delegate prototypes:
+        h4
+          ul
+            li Through the constructor pattern.
+            li Through Object.create().
+
+      section(data-bespoke-backdrop='constructor')
+        h2 The constructor pattern
+
+      section
+        pre(class='code--medium')
+          code.language-javascript.
+            function Greeter(name) {
+              this.name = name || 'John Doe';
+            }
+             
+            Greeter.prototype.hello = function hello() {
+              return 'Hello, my name is ' + this.name;
+            }
+             
+            var george = new Greeter('George');   
+
+      section(data-bespoke-backdrop='god')
+        h2 Object.create()
+
+      section
+        pre(class='code--medium')
+          code.language-javascript.
+            var proto = {
+              hello: function hello() {
+                return 'Hello, my name is ' + this.name;
+              }
+            };
+             
+            var george = Object.create(proto);
+            george.name = 'George'; 
+
+      section(data-bespoke-backdrop='question')
+        h2 Why delegation matters?
+        h4
+          ul
+            li Method delegation is a fantastic way to preserve memory resources.
+            li It’s a great way to add capabilities at runtime to all objects which share a particular prototype.
+
     script(src='build/build.js')
