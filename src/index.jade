@@ -355,13 +355,13 @@ html
         h3 There are three kinds of Prototypal inheritance.
         h4 
           ul
-            li Delegation.
-            li Concatenation.
-            li Closure. (Identified by Eric Elliot).
+            li Delegative inheritance.
+            li Concatenative inheritance.
+            li Functional inheritance. (Identified by Douglas Crockford).
         h4 And the three of them are supported by JavaScript.
 
       section(data-bespoke-backdrop='delegation')
-        h2 Delegation
+        h2 Delegative inheritance.
 
       section(data-bespoke-backdrop='nerd')
         h2 A delegate prototype is an object that serves as a base for another object.
@@ -388,12 +388,12 @@ html
             function Greeter(name) {
               this.name = name || 'John Doe';
             }
-             
+            
             Greeter.prototype.hello = function hello() {
               return 'Hello, my name is ' + this.name;
-            }
-             
-            var george = new Greeter('George');   
+            };
+            
+            var george = new Greeter('George');
 
       section(data-bespoke-backdrop='god')
         h2 Object.create()
@@ -408,7 +408,7 @@ html
             };
              
             var george = Object.create(proto);
-            george.name = 'George'; 
+            george.name = 'George';
 
       section(data-bespoke-backdrop='question')
         h2 Why delegation matters?
@@ -416,5 +416,104 @@ html
           ul
             li Method delegation is a fantastic way to preserve memory resources.
             li It’s a great way to add capabilities at runtime to all objects which share a particular prototype.
+
+      section(data-bespoke-backdrop='homerclon')
+        h2 Concatenative inheritance.
+        h3 Prototype cloning.
+
+      section(data-bespoke-backdrop='nerd')
+        h4 Prototype cloning is the process of copying the properties from one object to another, without retaining a reference between the two objects.
+
+      section(data-bespoke-backdrop='somuchwin')
+        h2 JavaScript allows dynamic object extension.
+        h3 So any object strcutre can be changed in runtime by adding or removing properties, which can't be done in the classical model.
+
+      section
+        pre(class='code--medium')
+          code.language-javascript.
+            var proto = {
+              hello: function hello() {
+                return 'Hello, my name is ' + this.name;
+              }
+            };
+            
+            //We are using the extend fuction from underscore.
+            var george = _.extend({}, proto, {name: 'George'});
+
+      section(data-bespoke-backdrop='question')
+        h2 Why concatenation matters?
+        h4
+          ul
+            li Cloning is a great way to store default state for objects.
+            li Property access is faster because inherited properties are copied.
+            li Objects may copy properties from any number of prototypes (composition).
+            li It enables behavior extension patterns like mixins.
+
+      section(data-bespoke-backdrop='scrat')
+        h2 Functional inheritance.
+        h3 Closure prototypes.
+
+      section(data-bespoke-backdrop='nerd')
+        h4 Closure prototypes are functions that can be run against a target object in order to extend it.
+        h3 They can hold encapsulated state and extend the new objects in order to they can hold it too.
+
+      section
+        pre(class='code--small')
+          code.language-javascript.
+            var PersonModel = function (personAge, personOccupation) {
+              var age = personAge || 0;
+              var occupation = personOccupation || 'none';
+             
+              this.getOccupation = function () {
+                return occupation;
+              };
+
+              this.getAge = function () {
+                return age;
+              };
+
+              this.happyBirthday = function () {
+                age++;
+              };
+            };
+
+            var george = {
+              name: 'George'
+            };
+
+            PersonModel.call(george, 13, 'student');
+
+            console.log(george.name); //George
+            console.log(george.getAge()); //13
+
+      section(data-bespoke-backdrop='question')
+        h2 Why closure prototypes matters?
+        h4
+          ul
+            li It enables objects to be extended with encapsulated state.
+
+      section
+        h3 Final thoughts
+
+      section(class='gif gif--cry')
+
+      section(data-bespoke-backdrop='advice')
+        h2 Some advices.
+        h4
+          ul
+            li Favor composition over inheritance.
+            li Favor the usage of factory constructor functions.
+            li Read and learn JavaScript patterns for object creation and inheritance.
+            li Read and learn about good and bad practices in JavaScript.
+            li Use libraries that reduce the complexity of combining patterns and techniques (like stampit).
+
+      section(data-bespoke-backdrop='takeaways')
+        h2 Takeaways.
+        h4
+          ul
+            li JavaScript cannot be properly learnt with the classical mindset.
+            li The mechanism for providing code re-utilization and state encapsulation are always at a foundation level of any language.
+
+      section(class='gif gif--thanks')
 
     script(src='build/build.js')
