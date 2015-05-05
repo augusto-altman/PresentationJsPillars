@@ -12,7 +12,6 @@ html
     article
 
       section(data-bespoke-backdrop='tasty')
-        h1 TastyJS meetups
 
       section(data-bespoke-backdrop='me')
         h2 About me
@@ -131,7 +130,7 @@ html
         h3 First pillar.
 
       section(data-bespoke-backdrop='madbaby')
-        h2 Everybody should clearly understand closures!!
+        h2 Understanding closures is vital!
         h3 They enable state encapsulation and therefore are part of the language foundations.
 
       section(data-bespoke-backdrop='twofingers')
@@ -176,12 +175,12 @@ html
             li Context is always the value of the this keyword.
 
       section(data-bespoke-backdrop='yingyang')
-        h3 In general programming language theory, scopes can be nested at any block level.
+        h3 In programming languages scopes can be nested at any block level.
         h2 Types of nested scopes.
         h4
           ul
-            li Lexical scopes, e.g: C, C++, JavaScript
-            li Dynamic scopes, e.g: Ruby
+            li Lexical scopes, e.g: C++ (if/for/while), JavaScript (functions)
+            li Dynamic scopes, e.g: Ruby (functions)
 
       section(data-bespoke-backdrop='chucknorrisapproves')
         h2 JavaScript allows scope nesting at function level. 
@@ -190,7 +189,7 @@ html
       section(data-bespoke-backdrop='lexicalscopes')
 
       section(class='gif gif--boring')
-        h4 Lexical scope is the concept, and JavaScript implements it via the scope chain.
+        h4 JavaScript implements lexical scopes via the scope chain.
         h3 A function has access to the variables present in their outer enclosing functions.
 
       section(data-bespoke-backdrop='scopechain')
@@ -221,7 +220,7 @@ html
             aFunc();
 
       section(data-bespoke-backdrop='enlightened')
-        h3 Like objects, closures are a mechanism for containing state. But only encapsulated state..
+        h3 Closures are a mechanism for containing encapsulated state.
         h4 So it's a means for encapsulation.
 
       section(data-bespoke-backdrop='factory')
@@ -340,16 +339,11 @@ html
         h3 Second pillar.
 
       section(data-bespoke-backdrop='madbaby')
-        h2 Everybody should clearly understand prototypal inheritance!!
+        h2 Understanding prototypal inheritance is vital!
         h3 They enable code re-utilization and therefore are part of the language foundations.
 
       section(data-bespoke-backdrop='evolution')
         h3 In prototypal inheritance, instances inherit from other instances.
-
-      section(data-bespoke-backdrop='cooldog')
-        h2 The prototypal inheritance model is more powerful than the classic model.
-        h6 It is fairly trivial to build a classic model on top of a prototypal model, while the other way around is a far more difficult task.
-        h3 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Mozilla</a>
 
       section(data-bespoke-backdrop='three')
         h3 There are three kinds of Prototypal inheritance.
@@ -373,7 +367,7 @@ html
       section(data-bespoke-backdrop='prototype-chain')
 
       section(data-bespoke-backdrop='relaxedhomer')
-        h4 There are two well-known ways of stablishing delegate prototypes:
+        h4 There are two well-known ways for stablishing delegate prototypes:
         h4
           ul
             li Through the constructor pattern.
@@ -426,7 +420,7 @@ html
 
       section(data-bespoke-backdrop='somuchwin')
         h2 JavaScript allows dynamic object extension.
-        h3 So any object strcutre can be changed in runtime by adding or removing properties, which can't be done in the classical model.
+        h3 So any object strcutre can be changed at runtime by adding or removing properties.
 
       section
         pre(class='code--medium')
@@ -444,14 +438,13 @@ html
         h2 Why concatenation matters?
         h4
           ul
-            li Cloning is a great way to store default state for objects.
             li Property access is faster because inherited properties are copied.
             li Objects may copy properties from any number of prototypes (composition).
             li It enables behavior extension patterns like mixins.
 
       section(data-bespoke-backdrop='scrat')
         h2 Functional inheritance.
-        h3 Closure prototypes.
+        h3 Closure prototypes. Popularized by Douglas Crockford
 
       section(data-bespoke-backdrop='nerd')
         h4 Closure prototypes are functions that can be run against a target object in order to extend it.
@@ -511,9 +504,11 @@ html
         h2 Takeaways.
         h4
           ul
-            li JavaScript cannot be properly learnt with the classical mindset.
+            li Stop thinking JavaScript with the classical mindset.
             li The mechanism for providing code re-utilization and state encapsulation are always at a foundation level of any language.
 
       section(class='gif gif--thanks')
+
+      section(data-bespoke-backdrop='tastyend')
 
     script(src='build/build.js')

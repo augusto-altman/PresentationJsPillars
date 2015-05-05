@@ -127,7 +127,10 @@ pre[class*="language-"] {
   background-image: url("../images/orion.jpg");
 }
 .tasty {
-  background-image: url("../images/tasty.jpg");
+  background-image: url("../images/tasty_1.jpg");
+}
+.tastyend {
+  background-image: url("../images/tasty_2.jpg");
 }
 .me {
   background-image: url("../images/me.png");

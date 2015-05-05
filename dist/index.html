@@ -8,9 +8,7 @@
   </head>
   <body>
     <article>
-      <section data-bespoke-backdrop="tasty">
-        <h1>TastyJS meetups</h1>
-      </section>
+      <section data-bespoke-backdrop="tasty"></section>
       <section data-bespoke-backdrop="me">
         <h2>About me</h2>
         <pre class="code--medium"><code class="language-javascript">var author = {
@@ -125,7 +123,7 @@
         <h3>First pillar.</h3>
       </section>
       <section data-bespoke-backdrop="madbaby">
-        <h2>Everybody should clearly understand closures!!</h2>
+        <h2>Understanding closures is vital!</h2>
         <h3>They enable state encapsulation and therefore are part of the language foundations.</h3>
       </section>
       <section data-bespoke-backdrop="twofingers">
@@ -173,12 +171,12 @@ someOtherfunc(someFunc);
         </h4>
       </section>
       <section data-bespoke-backdrop="yingyang">
-        <h3>In general programming language theory, scopes can be nested at any block level.</h3>
+        <h3>In programming languages scopes can be nested at any block level.</h3>
         <h2>Types of nested scopes.</h2>
         <h4>
           <ul>
-            <li>Lexical scopes, e.g: C, C++, JavaScript</li>
-            <li>Dynamic scopes, e.g: Ruby</li>
+            <li>Lexical scopes, e.g: C++ (if/for/while), JavaScript (functions)</li>
+            <li>Dynamic scopes, e.g: Ruby (functions)</li>
           </ul>
         </h4>
       </section>
@@ -188,7 +186,7 @@ someOtherfunc(someFunc);
       </section>
       <section data-bespoke-backdrop="lexicalscopes"></section>
       <section class="gif gif--boring">
-        <h4>Lexical scope is the concept, and JavaScript implements it via the scope chain.</h4>
+        <h4>JavaScript implements lexical scopes via the scope chain.</h4>
         <h3>A function has access to the variables present in their outer enclosing functions.</h3>
       </section>
       <section data-bespoke-backdrop="scopechain"></section>
@@ -217,7 +215,7 @@ aFunc();
 </code></pre>
       </section>
       <section data-bespoke-backdrop="enlightened">
-        <h3>Like objects, closures are a mechanism for containing state. But only encapsulated state..</h3>
+        <h3>Closures are a mechanism for containing encapsulated state.</h3>
         <h4>So it's a means for encapsulation.</h4>
       </section>
       <section data-bespoke-backdrop="factory">
@@ -332,16 +330,11 @@ console.log(someVar); //San Lorenzo de Almagro
         <h3>Second pillar.</h3>
       </section>
       <section data-bespoke-backdrop="madbaby">
-        <h2>Everybody should clearly understand prototypal inheritance!!</h2>
+        <h2>Understanding prototypal inheritance is vital!</h2>
         <h3>They enable code re-utilization and therefore are part of the language foundations.</h3>
       </section>
       <section data-bespoke-backdrop="evolution">
         <h3>In prototypal inheritance, instances inherit from other instances.</h3>
-      </section>
-      <section data-bespoke-backdrop="cooldog">
-        <h2>The prototypal inheritance model is more powerful than the classic model.</h2>
-        <h6>It is fairly trivial to build a classic model on top of a prototypal model, while the other way around is a far more difficult task.</h6>
-        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Mozilla</a></h3>
       </section>
       <section data-bespoke-backdrop="three">
         <h3>There are three kinds of Prototypal inheritance.</h3>
@@ -366,7 +359,7 @@ console.log(someVar); //San Lorenzo de Almagro
       </section>
       <section data-bespoke-backdrop="prototype-chain"></section>
       <section data-bespoke-backdrop="relaxedhomer">
-        <h4>There are two well-known ways of stablishing delegate prototypes:</h4>
+        <h4>There are two well-known ways for stablishing delegate prototypes:</h4>
         <h4>
           <ul>
             <li>Through the constructor pattern.</li>
@@ -421,7 +414,7 @@ george.name = 'George';
       </section>
       <section data-bespoke-backdrop="somuchwin">
         <h2>JavaScript allows dynamic object extension.</h2>
-        <h3>So any object strcutre can be changed in runtime by adding or removing properties, which can't be done in the classical model.</h3>
+        <h3>So any object strcutre can be changed at runtime by adding or removing properties.</h3>
       </section>
       <section>
         <pre class="code--medium"><code class="language-javascript">var proto = {
@@ -438,7 +431,6 @@ var george = _.extend({}, proto, {name: 'George'});
         <h2>Why concatenation matters?</h2>
         <h4>
           <ul>
-            <li>Cloning is a great way to store default state for objects.</li>
             <li>Property access is faster because inherited properties are copied.</li>
             <li>Objects may copy properties from any number of prototypes (composition).</li>
             <li>It enables behavior extension patterns like mixins.</li>
@@ -447,7 +439,7 @@ var george = _.extend({}, proto, {name: 'George'});
       </section>
       <section data-bespoke-backdrop="scrat">
         <h2>Functional inheritance.</h2>
-        <h3>Closure prototypes.</h3>
+        <h3>Closure prototypes. Popularized by Douglas Crockford</h3>
       </section>
       <section data-bespoke-backdrop="nerd">
         <h4>Closure prototypes are functions that can be run against a target object in order to extend it.</h4>
@@ -509,12 +501,13 @@ console.log(george.getAge()); //13
         <h2>Takeaways.</h2>
         <h4>
           <ul>
-            <li>JavaScript cannot be properly learnt with the classical mindset.</li>
+            <li>Stop thinking JavaScript with the classical mindset.</li>
             <li>The mechanism for providing code re-utilization and state encapsulation are always at a foundation level of any language.</li>
           </ul>
         </h4>
       </section>
       <section class="gif gif--thanks"></section>
+      <section data-bespoke-backdrop="tastyend"></section>
     </article>
     <script src="build/build.js"></script>
   </body>
