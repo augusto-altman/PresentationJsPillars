@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The two pillars of javascript</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-backdrop="tasty"></section>
+      <section data-bespoke-backdrop="me">
+        <h2>About me</h2>
+        <pre class="code--medium"><code class="language-javascript">var author = {
+  tito: {
+    name: 'Augusto Altman Quaranta',
+    worksAt: {
+        corp: 'Intel Corporation',
+        site: 'ASDC',
+        project: 'TrueKey'
+    }
+  };
+  </code></pre>
+      </section>
+      <section data-bespoke-backdrop="socialmedia">
+        <h4>
+          <ul>
+            <li><span style="color:orange"><a href="https://twitter.com/AugustoAltman">Twitter</a></span></li>
+            <li><span style="color:orange"><a href="https://github.com/augusto-altman">GitHub</a></span></li>
+            <li><span style="color:orange"><a href="https://www.npmjs.com/~augusto.altman">NPM</a></span></li>
+            <li><span style="color:orange"><a href="http://stackoverflow.com/users/3685148/augustoaltman">Stackoverflow</a></span></li>
+            <li><span style="color:orange"><a href="http://augustoaltman.tumblr.com/">blog</a></span></li>
+          </ul>
+        </h4>
+      </section>
+      <section class="gif gif--nerd"></section>
+      <section data-bespoke-backdrop="pillars">
+        <h1>The two pillars of JavaSript</h1>
+      </section>
+      <section>
+        <h3>Chapter 1</h3>
+      </section>
+      <section data-bespoke-backdrop="darkcoding">
+        <h2>Hello darkness, my old friend. I've come to <span style="color:orange">code </span>
+          <with>you again.</with>
+        </h2>
+        <h3><a href="https://www.youtube.com/watch?v=4zLfCnGVeL4">♫ Simon & Garfunkel - The sound of silence</a></h3>
+      </section>
+      <section data-bespoke-backdrop="jsrocks">
+        <h2>But do not misunderstand me, JavaScript rocks!</h2>
+      </section>
+      <section data-bespoke-backdrop="versatile">
+        <h2><span style="color:orange">Because it's versatile</span></h2>
+        <h4>
+          <ul>
+            <li><span style="color:lightblue">Functional.</span></li>
+            <li><span style="color:lightblue">Object oriented.</span></li>
+            <li><span style="color:lightblue">Event-based.</span></li>
+            <li><span style="color:lightblue">Procedural.</span></li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="dynamic">
+        <h2>Because it's dynamic</h2>
+        <h4>
+          <ul>
+            <li>Weekly typed.</li>
+            <li>No classes.</li>
+            <li>Native late binding.</li>
+            <li>Not compiled.</li>
+            <li>Eval.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="opensource">
+        <h2>Because it's open source</h2>
+        <h4>
+          <ul>
+            <li>Based on ECMAScript.</li>
+            <li>All the best engines, tools and libraries are open source.</li>
+            <li>Most used language on GitHub.</li>
+            <li>You can always check the source code.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="ubiquitous">
+        <h2>Because it's ubiquitous and universal</h2>
+        <h4>
+          <ul>
+            <li>Standar language for web aplications.</li>
+            <li>All software is becoming web software.</li>
+            <li>Node.JS and io.js are taking over the server side.</li>
+            <li>Npm is the largest programming language package repository.</li>
+            <li>Available also for embeded systems.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="youshouldlearnjs">
+        <h2>You should be learning JavaScript right now.</h2>
+      </section>
+      <section data-bespoke-backdrop="theproblem">
+        <h2>The problem isn't JavaScript.</h2>
+        <h3>The problem is the way people learn it.</h3>
+      </section>
+      <section data-bespoke-backdrop="noideadog">
+        <h2>The reallity</h2>
+        <h3>Almost everybody knows a little JavaScript, but almost nobody really understands JavaScript.</h3>
+      </section>
+      <section class="gif gif--noidea"></section>
+      <section data-bespoke-backdrop="ericelliot">
+        <h4>99 out of 100 JavaScript developers I interview lack the skills required to hit the ground running on a scalable production JavaScript application.</h4>
+        <h3>Eric Elliot.</h3>
+      </section>
+      <section data-bespoke-backdrop="yaoming">
+        <h4>The fact is, most of the world’s software infrastructure is heavily dependent on JavaScript: perhaps the world’s most misunderstood programming language.</h4>
+        <h3>Eric Elliot.</h3>
+      </section>
+      <section>
+        <h3>Chapter 2</h3>
+      </section>
+      <section data-bespoke-backdrop="everywhere">
+        <h2>Closures, closures everywhere.</h2>
+        <h3>First pillar.</h3>
+      </section>
+      <section data-bespoke-backdrop="madbaby">
+        <h2>Understanding closures is vital!</h2>
+        <h3>They enable state encapsulation and therefore are part of the language foundations.</h3>
+      </section>
+      <section data-bespoke-backdrop="twofingers">
+        <h2>There are two key concepts around closures:</h2>
+        <h4>
+          <ul>
+            <li>First-class functions.</li>
+            <li>Function lexical scope.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="firstclassplane">
+        <h2>First-class functions.</h2>
+      </section>
+      <section data-bespoke-backdrop="firstclass">
+        <h2>A first-class function is one that may participate as a normal data</h2>
+        <h3>i.e. be created literally at runtime, be passed as an argument, or be returned as a value from another function.</h3>
+      </section>
+      <section>
+        <pre class="code--medium"><code class="language-javascript">function someFun() {
+  console.log('lalala');
+}
+
+function someOtherFunc(callback) {
+  callback();
+}
+
+someOtherfunc(someFunc);
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="lexical">
+        <h2>Lexical scopes.</h2>
+      </section>
+      <section class="gif gif--fight">
+        <h4>For the sake conceptual clearity.</h4>
+        <h2>Context vs Scope</h2>
+      </section>
+      <section data-bespoke-backdrop="scientiscat">
+        <h3>Every function invocation has both a scope and a context associated with it.</h3>
+        <h4>
+          <ul>
+            <li>Scope pertains to the variable access of the function when it is invoked.</li>
+            <li>Context is always the value of the this keyword.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="yingyang">
+        <h3>In programming languages scopes can be nested at any block level.</h3>
+        <h2>Types of nested scopes.</h2>
+        <h4>
+          <ul>
+            <li>Lexical scopes, e.g: C++ (if/for/while), JavaScript (functions)</li>
+            <li>Dynamic scopes, e.g: Ruby (functions)</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="chucknorrisapproves">
+        <h2>JavaScript allows scope nesting at function level. </h2>
+        <h3>Functions are lexical scoped in JavaScript.</h3>
+      </section>
+      <section data-bespoke-backdrop="lexicalscopes"></section>
+      <section class="gif gif--boring">
+        <h4>JavaScript implements lexical scopes via the scope chain.</h4>
+        <h3>A function has access to the variables present in their outer enclosing functions.</h3>
+      </section>
+      <section data-bespoke-backdrop="scopechain"></section>
+      <section data-bespoke-backdrop="closure">
+        <h2>Closures</h2>
+      </section>
+      <section data-bespoke-backdrop="thinking">
+        <h3>Whenever a function is treated as data it must mantain its scope chain.</h3>
+        <h4>i.e. when we pass a function reference as an argument we are also passing its scope chain so it can be executed later maintaining its lexical scope.</h4>
+      </section>
+      <section data-bespoke-backdrop="awesome">
+        <h2>And that's what a closure is!</h2>
+        <h3>Formally speaking: A closure is a pair consisting of the function code and the environment in which the function is created (its lexical scopes).</h3>
+      </section>
+      <section>
+        <pre class="code--medium"><code class="language-javascript">function funcFactory() {
+  var name = "tito";
+  function showName() {
+    console.log(name);
+  }
+  return showName;
+}
+
+var aFunc = funcFactory();
+aFunc();
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="enlightened">
+        <h3>Closures are a mechanism for containing encapsulated state.</h3>
+        <h4>So it's a means for encapsulation.</h4>
+      </section>
+      <section data-bespoke-backdrop="factory">
+        <h2>A great example of how closures provides encapsulation is the <span style="color:orange">factory constructor function pattern.</span></h2>
+        <h3><a href="http://javascript.info/tutorial/factory-constructor-pattern">From javascript.info patterns repository.</a></h3>
+      </section>
+      <section>
+        <pre class="code--small"><code class="language-javascript">function Person(newPersonName, newPersonDeathAge) { //factory constructor function
+  var name = newPersonName || 'tito';
+  var deathAge = newPersonDeathAge || 80;
+  var age = 0;
+  return {
+    reName: function (newName){
+      name = newName;
+    },
+    getName: function (){
+      return name;
+    },
+    happyBithday: function () {
+      if(this.isAlive())
+        age++;
+    },
+    getAge: function () {
+      return age;
+    },
+    isAlive: function () {
+      return this.getAge() < deathAge;
+    }
+  };
+}
+</code></pre>
+      </section>
+      <section>
+        <pre class="code--medium"><code class="language-javascript">var josePerez = Person('jose', 30);
+var juanRodriguez = Person('juan');
+
+for(var i = 0; i<20; i++){
+  josePerez.happyBithday();
+}
+juanRodriguez.happyBithday();
+juanRodriguez.happyBithday();
+
+console.log(josePerez.getAge()); //20
+console.log(juanRodriguez.getAge()); //2
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="coolcat">
+        <h3>Encapsulation through closures can also be exploited to:</h3>
+        <h4>
+          <ul>
+            <li>Propagate state through async calls.</li>
+            <li>Create namespaces.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="statepropagation">
+        <h2>Async state propagation.</h2>
+        <h3>Callbacks.</h3>
+      </section>
+      <section>
+        <pre class="code--small"><code class="language-javascript">function TimeTalker(newMaxTime, newPhrase) {
+  var maxTime = newMaxTime || 30;
+  var phrase = newPhrase || 'soyez le tito';
+  var interval;
+  var counter = 0;
+  return {
+    start: function () {
+      interval = setInterval(function callback(){
+        console.log(phrase);
+        counter++;
+        if(counter >= maxTime) {
+          clearInterval(interval);
+        }
+      }, 1000);
+    }
+  };
+}
+
+var aTalker = TimeTalker(5, 'closures are awesome');
+aTalker.start();
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="carcrash">
+        <h2>Namespace creation.</h2>
+        <h3>Avoiding name crashes.</h3>
+      </section>
+      <section data-bespoke-backdrop="crockford">
+        <h2>A great example of how closures provides namespacing is the <span style="color:orange">module pattern.</span></h2>
+        <h3>Popularized by Douglas Crockford</h3>
+      </section>
+      <section>
+        <pre class="code--small"><code class="language-javascript">var someVar = 'San Lorenzo de Almagro';
+console.log(someVar); //San Lorenzo de Almagro
+
+var Module = (function () { //IIFE
+  var someVar = 'walla walla';
+  var someOtherVar;
+  console.log(someVar); //walla walla
+  return function() {
+    //doSomething
+  };
+})();
+
+console.log(someVar); //San Lorenzo de Almagro
+</code></pre>
+      </section>
+      <section>
+        <h3>Chapter 3</h3>
+      </section>
+      <section data-bespoke-backdrop="prototype">
+        <h2>Prototypal inheritance.</h2>
+        <h3>Second pillar.</h3>
+      </section>
+      <section data-bespoke-backdrop="madbaby">
+        <h2>Understanding prototypal inheritance is vital!</h2>
+        <h3>They enable code re-utilization and therefore are part of the language foundations.</h3>
+      </section>
+      <section data-bespoke-backdrop="evolution">
+        <h3>In prototypal inheritance, instances inherit from other instances.</h3>
+      </section>
+      <section data-bespoke-backdrop="three">
+        <h3>There are three kinds of Prototypal inheritance.</h3>
+        <h4>
+          <ul>
+            <li>Delegative inheritance.</li>
+            <li>Concatenative inheritance.</li>
+            <li>Functional inheritance. (Identified by Douglas Crockford).</li>
+          </ul>
+        </h4>
+        <h4>And the three of them are supported by JavaScript.</h4>
+      </section>
+      <section data-bespoke-backdrop="delegation">
+        <h2>Delegative inheritance.</h2>
+      </section>
+      <section data-bespoke-backdrop="nerd">
+        <h2>A delegate prototype is an object that serves as a base for another object.</h2>
+        <h4>The language is resposible of dispatching the correct method or finding the right piece of data simply by following a series of delegation pointers (from object to its prototype) until a match is found.</h4>
+      </section>
+      <section data-bespoke-backdrop="dafuck">
+        <h3>JavaScript provides natively delegation inheritance through the prototype chain mechanism.</h3>
+      </section>
+      <section data-bespoke-backdrop="prototype-chain"></section>
+      <section data-bespoke-backdrop="relaxedhomer">
+        <h4>There are two well-known ways for stablishing delegate prototypes:</h4>
+        <h4>
+          <ul>
+            <li>Through the constructor pattern.</li>
+            <li>Through Object.create().</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="constructor">
+        <h2>The constructor pattern</h2>
+      </section>
+      <section>
+        <pre class="code--medium"><code class="language-javascript">function Greeter(name) {
+  this.name = name || 'John Doe';
+}
+
+Greeter.prototype.hello = function hello() {
+  return 'Hello, my name is ' + this.name;
+};
+
+var george = new Greeter('George');
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="god">
+        <h2>Object.create()</h2>
+      </section>
+      <section>
+        <pre class="code--medium"><code class="language-javascript">var proto = {
+  hello: function hello() {
+    return 'Hello, my name is ' + this.name;
+  }
+};
+
+var george = Object.create(proto);
+george.name = 'George';
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="question">
+        <h2>Why delegation matters?</h2>
+        <h4>
+          <ul>
+            <li>Method delegation is a fantastic way to preserve memory resources.</li>
+            <li>It’s a great way to add capabilities at runtime to all objects which share a particular prototype.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="homerclon">
+        <h2>Concatenative inheritance.</h2>
+        <h3>Prototype cloning.</h3>
+      </section>
+      <section data-bespoke-backdrop="nerd">
+        <h4>Prototype cloning is the process of copying the properties from one object to another, without retaining a reference between the two objects.</h4>
+      </section>
+      <section data-bespoke-backdrop="somuchwin">
+        <h2>JavaScript allows dynamic object extension.</h2>
+        <h3>So any object strcutre can be changed at runtime by adding or removing properties.</h3>
+      </section>
+      <section>
+        <pre class="code--medium"><code class="language-javascript">var proto = {
+  hello: function hello() {
+    return 'Hello, my name is ' + this.name;
+  }
+};
+
+//We are using the extend fuction from underscore.
+var george = _.extend({}, proto, {name: 'George'});
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="question">
+        <h2>Why concatenation matters?</h2>
+        <h4>
+          <ul>
+            <li>Property access is faster because inherited properties are copied.</li>
+            <li>Objects may copy properties from any number of prototypes (composition).</li>
+            <li>It enables behavior extension patterns like mixins.</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="scrat">
+        <h2>Functional inheritance.</h2>
+        <h3>Closure prototypes. Popularized by Douglas Crockford</h3>
+      </section>
+      <section data-bespoke-backdrop="nerd">
+        <h4>Closure prototypes are functions that can be run against a target object in order to extend it.</h4>
+        <h3>They can hold encapsulated state and extend the new objects in order to they can hold it too.</h3>
+      </section>
+      <section>
+        <pre class="code--small"><code class="language-javascript">var PersonModel = function (personAge, personOccupation) {
+  var age = personAge || 0;
+  var occupation = personOccupation || 'none';
+  
+  this.getOccupation = function () {
+    return occupation;
+  };
+  
+  this.getAge = function () {
+    return age;
+  };
+  
+  this.happyBirthday = function () {
+    age++;
+  };
+};
+
+var george = {
+  name: 'George'
+};
+
+PersonModel.call(george, 13, 'student');
+
+console.log(george.name); //George
+console.log(george.getAge()); //13
+</code></pre>
+      </section>
+      <section data-bespoke-backdrop="question">
+        <h2>Why closure prototypes matters?</h2>
+        <h4>
+          <ul>
+            <li>It enables objects to be extended with encapsulated state.</li>
+          </ul>
+        </h4>
+      </section>
+      <section>
+        <h3>Final thoughts</h3>
+      </section>
+      <section class="gif gif--cry"></section>
+      <section data-bespoke-backdrop="advice">
+        <h2>Some advices.</h2>
+        <h4>
+          <ul>
+            <li>Favor composition over inheritance.</li>
+            <li>Favor the usage of factory constructor functions.</li>
+            <li>Read and learn JavaScript patterns for object creation and inheritance.</li>
+            <li>Read and learn about good and bad practices in JavaScript.</li>
+            <li>Use libraries that reduce the complexity of combining patterns and techniques (like stampit).</li>
+          </ul>
+        </h4>
+      </section>
+      <section data-bespoke-backdrop="takeaways">
+        <h2>Takeaways.</h2>
+        <h4>
+          <ul>
+            <li>Stop thinking JavaScript with the classical mindset.</li>
+            <li>The mechanism for providing code re-utilization and state encapsulation are always at a foundation level of any language.</li>
+          </ul>
+        </h4>
+      </section>
+      <section class="gif gif--thanks"></section>
+      <section data-bespoke-backdrop="tastyend"></section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
